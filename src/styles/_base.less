@@ -1,0 +1,21 @@
+html {
+  font-size: 62.5%; //10px
+
+  @media screen and (min-width: 1500px) and (min-height: 900px) {
+    font-size: 75%;
+  }
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.8rem;
+  font-family: var(--primaryFont);
+  font-weight: 400;
+  color: var(--textColor);
+  line-height: 1.5;
+  background: var(--bgColor);
+
+  @media screen and (min-width: 768px) {
+    font-size: 2rem;
+  }
+}

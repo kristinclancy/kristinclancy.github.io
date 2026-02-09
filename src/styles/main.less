@@ -1,0 +1,55 @@
+@import '_variables.less';
+@import '_reset.less';
+@import '_base.less';
+
+main {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 4rem var(--pagePadding);
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+  font-weight: 500;
+  transition: text-decoration .2s ease-in-out;
+
+  @media (hover: hover) {
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+
+    &:focus-visible {
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+h1,h2,h3,h4,h5, p {
+  margin: 0;
+}
+
+.about {
+  max-width: 75rem;
+
+  h1 {
+    margin-bottom: .3em;
+    font-size: 3.4rem;
+
+    @media screen and (min-width: 768px) {
+      font-size: 4.2rem;
+    }
+  }
+
+  p {
+    margin-bottom: 1em;;
+  }
+
+  & >:last-child {
+    margin-bottom: 0;
+  }
+}
