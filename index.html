@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kristin Clancy - Frontend Developer</title>
+    <title>Kristin Clancy / Frontend Developer</title>
     <meta
       name="description"
       content="Kristin Clancy is a frontend developer with over a decade of experience. She focuses on building responsive, accurate, and accessible websites."
@@ -19,80 +19,553 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="/src/styles/main.less" />
   </head>
   <body>
+    <div class="cursor js-cursor">
+      <span class="cursor__icon">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 18L18 6M18 6H10M18 6V14"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </div>
     <main>
-      <section class="about">
-        <h1>Hi, I’m Kristin</h1>
-        <p>
-          I’m a frontend developer with over a decade of experience and have
-          spent the last 8 years at
-          <a href="https://himandher.ca" target="_blank" rel="noreferrer"
-            >Him & Her</a
-          >. I build responsive websites, with a strong focus on accuracy,
-          accessibility, performance, and SEO. I’m detail-oriented and aim to
-          get things right the first time.
-        </p>
-        <p>
-          Some examples of projects I’ve been involved with include
-          <a href="https://www.thebmigroup.ca/" target="_blank" rel="noreferrer"
-            >The BMI Group</a
-          >,
+      <header class="header js-header">
+        <div class="header__inner">
+          <span class="header__initials">K — C</span>
+          <button class="header__nav-toggle js-nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="nav js-nav" inert>
+          <nav class="nav__main">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="#about" class="nav__link"><span>About</span></a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#work" class="nav__link"><span>Work</span></a>
+              </li>
+              <li class="nav__list-item">
+                <a href="#experience" class="nav__link"
+                  ><span>Experience</span></a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a href="#contact" class="nav__link"><span>Contact</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="hero">
+        <h1 class="hero__title js-animate fade">Kristin Clancy</h1>
+
+        <div class="hero__footer">
+          <div class="hero__subtitle js-animate fade">
+            Frontend developer based in Ontario, Canada
+          </div>
+          <div class="hero__links js-animate fade">
+            <a
+              href="linkedin.com/in/clancykristin"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="about js-animate fade" id="about">
+        <h2 class="about__title">
+          The kind of developer designers actually like working with.
+        </h2>
+        <div class="about__text">
+          <p>
+            I am a frontend developer with 12 years of experience building
+            responsive, performant, and accessible websites. I've spent most of
+            my career at agencies, working across e-commerce, real estate, and
+            other industries. I like solving hard problems, I'm detail-oriented,
+            and I take a lot of pride in taking a design and building it exactly
+            the way it was intended.
+          </p>
+        </div>
+      </section>
+
+      <section class="work" id="work">
+        <div class="work__title js-animate fade">
+          <h2>Work</h2>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+          <span aria-hidden="true">Work</span>
+        </div>
+
+        <div class="work__list js-animate fade">
           <a
-            href="https://www.millbankhardware.com/"
+            class="project"
+            href="https://www.thebmigroup.ca/"
             target="_blank"
             rel="noreferrer"
-            >Millbank Hardware</a
-          >,
+            title="View The BMI Group website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">The BMI Group</h3>
+              <p class="project__description">
+                Corporate site for a real estate development company, built
+                around a flexible, modular page structure.
+              </p>
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
           <a
+            class="project"
+            href="https://www.millbankhardware.com"
+            target="_blank"
+            rel="noreferrer"
+            title="View Millbank Hardware's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Millbank Hardware</h3>
+              <p class="project__description">
+                Local hardware store brought online. Built the frontend and
+                integrated with internal APIs for inventory, products, and
+                customer accounts.
+              </p>
+              <p class="project__skills">
+                Frontend Development / Node.js / Statamic CMS
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
             href="https://www.raffi-jewellers.ca/"
             target="_blank"
             rel="noreferrer"
-            >Raffi Jewellers</a
-          >,
-          <a href="https://crownverity.ca/" target="_blank" rel="noreferrer"
-            >Crown Verity</a
-          >,
+            title="View Raffi Jewellers' website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Raffi Jewellers</h3>
+              <p class="project__description">
+                Luxury e-commerce site with a strong emphasis on performance,
+                including a dedicated Rolex section built to strict brand
+                standards.
+              </p>
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS / Headless
+                Shopify
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
           <a
+            class="project"
+            href="https://www.crownverity.ca/"
+            target="_blank"
+            rel="noreferrer"
+            title="View Crown Verity's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Crown Verity</h3>
+              <p class="project__description">
+                E-commerce site for a luxury outdoor grill brand.
+              </p>
+              <p class="project__skills">
+                Frontend Development / Node.js / Headless Shopify / Statamic CMS
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
             href="https://web.archive.org/web/20250801235815/https://www.acceleratorcentre.com/"
             target="_blank"
             rel="noreferrer"
-            >The Accelerator Centre</a
-          >,
-          <a href="https://www.stationpark.ca/" target="_blank" rel="noreferrer"
-            >Station Park</a
-          >,
-          <a href="https://kwsphumane.ca/" target="_blank" rel="noreferrer"
-            >KWSP Humane Society</a
-          >,
-          <a href="https://chocolatesoup.co/" target="_blank" rel="noreferrer"
-            >Chocolate Soup</a
-          >,
+            title="View The Accelerator Centre's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">The Accelerator Centre</h3>
+              <p class="project__description">
+                Corporate site for a non-profit business incubator, with a focus
+                on scroll-driven animation.
+                <em
+                  >(Linking to archived version — site has since been
+                  replaced.)</em
+                >
+              </p>
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS / GSAP
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
           <a
+            class="project"
+            href="https://stationpark.com/"
+            target="_blank"
+            rel="noreferrer"
+            title="View Station Park's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Station Park</h3>
+              <p class="project__description">
+                Marketing site for a mixed-use condo development, integrated
+                with Salesforce for lead management.
+              </p>
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS / Salesforce
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
+            href="https://kwsphumane.ca/"
+            target="_blank"
+            rel="noreferrer"
+            title="View The Humane Society of Kitchener Waterloo and Stratford Perth's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">KWSP Humane Society</h3>
+              <p class="project__description">
+                Site for a regional humane society, built for ease of content
+                management and editorial flexibility.
+              </p>
+
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
+            href="https://lomi.com/"
+            target="_blank"
+            rel="noreferrer"
+            title="View Lomi's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Lomi</h3>
+              <p class="project__description">
+                Shopify theme development and ongoing module work for a consumer
+                appliance brand, including a full reskin during a brand refresh.
+              </p>
+
+              <p class="project__skills">Frontend Development / Shopify</p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
+            href="https://www.chocolatesoup.co/"
+            target="_blank"
+            rel="noreferrer"
+            title="View Chocolate Soup's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Lomi</h3>
+              <p class="project__description">
+                Web platform for an employee recognition program, with a strong
+                focus on animation and motion design.
+              </p>
+
+              <p class="project__skills">
+                Fullstack Development / Node.js / Contentful CMS / GSAP
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
+          <a
+            class="project"
             href="https://livingateventide.com/"
             target="_blank"
             rel="noreferrer"
-            >Eventide</a
-          >, and
-          <a href="https://trevorclare.art/" target="_blank" rel="noreferrer"
-            >Trevor Clare Art</a
-          >.
-        </p>
-        <p>
-          If you want to get in touch, you can find me on
+            title="View Eventide's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Eventide</h3>
+              <p class="project__description">
+                Marketing site for a rental building in Halifax.
+              </p>
+
+              <p class="project__skills">
+                Fullstack Development / Statamic CMS
+              </p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+
           <a
-            href="https://linkedin.com/in/clancykristin"
+            class="project"
+            href="https://trevorclare.art/"
             target="_blank"
             rel="noreferrer"
+            title="View Trevor Clare Art's website"
+            data-cursor-expand
+          >
+            <div class="project__details">
+              <h3 class="project__name">Trevor Clare Art</h3>
+              <p class="project__description">
+                Online store for a local artist.
+              </p>
+
+              <p class="project__skills">Frontend Development / Shopify</p>
+            </div>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="project__arrow"
+            >
+              <path
+                d="M6 18L18 6M18 6H10M18 6V14"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <div class="experience__title js-animate fade">
+          <h2>Experience</h2>
+          <span aria-hidden="true">Experience</span>
+          <span aria-hidden="true">Experience</span>
+          <span aria-hidden="true">Experience</span>
+          <span aria-hidden="true">Experience</span>
+          <span aria-hidden="true">Experience</span>
+          <span aria-hidden="true">Experience</span>
+        </div>
+
+        <ul class="experience__list js-animate fade">
+          <li class="experience__list-item">
+            <span>Senior Frontend Developer — Him & Her</span>
+            <span>2023 - Present</span>
+          </li>
+          <li class="experience__list-item">
+            <span>Frontend Developer — Him & Her</span>
+            <span>2017 - 2023</span>
+          </li>
+          <li class="experience__list-item">
+            <span>Frontend Developer — Future Access</span>
+            <span>2015 - 2017</span>
+          </li>
+          <li class="experience__list-item">
+            <span>Web Design Research Associate — Niagara College</span>
+            <span>2014 - 2015</span>
+          </li>
+        </ul>
+      </section>
+      <footer class="footer">
+        <div class="footer__cta js-animate fade" id="contact">
+          <h3 class="footer__cta-title">Want to get in touch?</h3>
+          <a href="mailto:hello@kristinclancy.ca" class="footer__cta-link"
+            ><span>hello<br />@kristinclancy.ca</span></a
+          >
+        </div>
+        <div class="footer__footer">
+          <a href="linkedin.com/in/clancykristin" target="_blank" rel="noopener"
             >LinkedIn</a
           >
-          or email me at
-          <a href="mailto:hello@kristinclancy.ca">hello@kristinclancy.ca</a>.
-        </p>
-      </section>
+          <p>
+            K—C &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+          </p>
+        </div>
+      </footer>
     </main>
     <script type="module" src="/src/main.ts"></script>
   </body>

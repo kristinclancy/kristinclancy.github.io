@@ -1,0 +1,37 @@
+.work {
+  display: grid;
+  gap: 2.5rem;
+}
+.work__title {
+  font-weight: 500;
+  font-size: ~"clamp(2.5rem, 0.7109rem + 7.6336vw, 4.375rem)";
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+
+  @media screen and (min-width: @lg) {
+    font-size: ~"clamp(4.375rem, 2.1528rem + 4.6296vw, 5.625rem)";
+  }
+
+  h2 {
+    font: inherit;
+  }
+  span {
+    user-select: none;
+    display: flex;
+    align-items: center;
+    opacity: 0.1;
+
+    &:before {
+      content: "";
+      display: block;
+      margin: 1rem;
+      width: 0.625rem;
+      height: 0.625rem;
+      border-radius: 50%;
+      background: currentColor;
+    }
+  }
+}
