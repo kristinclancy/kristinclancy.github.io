@@ -33,11 +33,15 @@
 }
 
 .header__nav-toggle {
-  width: 5rem;
+  width: 3rem;
   display: flex;
   flex-direction: column;
   gap: 0.625rem;
   padding: 0.5rem 0;
+
+  @media screen and (min-width: @sm) {
+    width: 5rem;
+  }
 
   span {
     height: 1px;
