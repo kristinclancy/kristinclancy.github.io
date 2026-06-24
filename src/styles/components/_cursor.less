@@ -1,0 +1,44 @@
+.cursor {
+  display: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(1);
+  mix-blend-mode: difference;
+  transition:
+    width 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+    height 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
+  align-items: center;
+  justify-content: center;
+
+  @media (pointer: fine) {
+    display: flex;
+  }
+
+  &__icon {
+    opacity: 0;
+    width: 50%;
+    transition: opacity 0.2s ease;
+    color: var(--black);
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &.is-expanded {
+    width: 5rem;
+    height: 5rem;
+
+    .cursor__icon {
+      opacity: 1;
+    }
+  }
+}

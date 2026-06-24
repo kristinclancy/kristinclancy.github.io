@@ -1,0 +1,124 @@
+.header {
+  background: var(--primary);
+  color: var(--black);
+
+  height: 4.125rem;
+
+  border-bottom: 1px solid var(--black);
+  position: absolute;
+  height: 4.125rem;
+  width: calc(100% - 2 * var(--gutter));
+  top: var(--gutter);
+  left: var(--gutter);
+  overflow: hidden;
+  transition: height 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+
+  &.open {
+    height: calc(100dvh - 2 * var(--gutter));
+  }
+}
+
+.header__inner {
+  padding: 0 var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.125rem;
+}
+
+.header__initials {
+  font-size: ~"clamp(1.25rem, 0.9191rem + 1.4118vw, 1.625rem)";
+  letter-spacing: -0.06em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.header__nav-toggle {
+  width: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding: 0.5rem 0;
+
+  @media screen and (min-width: @sm) {
+    width: 5rem;
+  }
+
+  span {
+    height: 1px;
+    background: var(--black);
+    display: block;
+    transform: none;
+    transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      span:nth-child(2) {
+        transform: scaleX(0.5);
+      }
+    }
+
+    &:focus-visible {
+      span:nth-child(2) {
+        transform: scaleX(0.5);
+      }
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  top: 4.125rem;
+  left: 0;
+  height: ~"calc(100% - 4.125rem)";
+  background: var(--primary);
+  width: 100%;
+  padding: var(--gutter);
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.625rem;
+
+  opacity: 0;
+  transform: translateX(-2em);
+  transition:
+    opacity 1s cubic-bezier(0.19, 1, 0.22, 1),
+    transform 1s cubic-bezier(0.19, 1, 0.22, 1);
+
+  .header.open & {
+    opacity: 1;
+    transform: none;
+    transition-delay: 0.3s;
+  }
+}
+
+.nav__link {
+  font-size: ~"clamp(3.125rem, 2.0221rem + 4.7059vw, 4.375rem)";
+  line-height: 1.033;
+  text-decoration: none;
+
+  span {
+    transform: none;
+    display: inline-block;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      span {
+        transform: translateX(0.3em);
+      }
+    }
+
+    &:focus-visible {
+      span {
+        transform: translateX(0.3em);
+      }
+    }
+  }
+}

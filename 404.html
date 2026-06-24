@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 / Kristin Clancy</title>
+    <meta
+      name="description"
+      content="Kristin Clancy is a frontend developer with over a decade of experience. She focuses on building responsive, accurate, and accessible websites."
+    />
+
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Kristin Clancy" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/src/styles/main.less" />
+  </head>
+  <body>
+    <div class="cursor js-cursor">
+      <span class="cursor__icon">
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 18L18 6M18 6H10M18 6V14"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </div>
+    <main>
+      <header class="header js-header">
+        <div class="header__inner">
+          <a href="/" class="header__initials">K — C</a>
+          <button class="header__nav-toggle js-nav-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="nav js-nav" inert>
+          <nav class="nav__main">
+            <ul class="nav__list">
+              <li class="nav__list-item">
+                <a href="/#about" class="nav__link"><span>About</span></a>
+              </li>
+              <li class="nav__list-item">
+                <a href="/#work" class="nav__link"><span>Work</span></a>
+              </li>
+              <li class="nav__list-item">
+                <a href="/#experience" class="nav__link"
+                  ><span>Experience</span></a
+                >
+              </li>
+              <li class="nav__list-item">
+                <a href="/#contact" class="nav__link"><span>Contact</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <section class="error">
+        <h1 class="error__title js-animate fade">Page not found</h1>
+
+       <p class="error__text">This page doesn't exist, but my work does.</p>
+
+       <a href="/#work" class="error__link">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 12H4M4 12L10 18M4 12L10 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>See my work</span></a>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
