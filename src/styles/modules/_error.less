@@ -1,0 +1,42 @@
+.error {
+  padding: calc(var(--gutter) + ~"4.125rem") var(--gutter) var(--gutter);
+  background: var(--primary);
+  color: var(--black);
+  min-height: calc(100dvh - 2 * var(--gutter));
+}
+
+.error__title {
+  font-weight: 500;
+  font-size: 18.6cqi;
+  letter-spacing: -0.07em;
+  line-height: 0.87;
+  margin-block-end: 2rem;
+}
+
+.error__link {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-block: 2rem;
+
+  span {
+    display: inline-block;
+    transform: none;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      span {
+        transform: translateX(0.3em);
+      }
+    }
+
+    &:focus-visible {
+      span {
+        transform: translateX(0.3em);
+      }
+    }
+  }
+}
