@@ -3,7 +3,12 @@
   color: var(--black);
   container-type: inline-size;
   width: 100%;
-  padding: calc(var(--gutter) + ~"4.125rem") var(--gutter) var(--gutter);
+  padding: calc(2 * var(--gutter) + ~"4.125rem") var(--gutter)
+    calc(2 * var(--gutter));
+
+  @media screen and (min-width: @sm) {
+    padding: calc(var(--gutter) + ~"4.125rem") var(--gutter) var(--gutter);
+  }
 }
 
 .hero__footer {

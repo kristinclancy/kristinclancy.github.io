@@ -1,6 +1,6 @@
 .project {
   // border-bottom: 1px solid currentColor;
-  padding: var(--gutter);
+  padding: calc(2 * var(--gutter)) var(--gutter);
   display: flex;
   justify-content: space-between;
   font-size: ~"clamp(1.125rem, 1.0147rem + 0.4706vw, 1.25rem)";
@@ -13,6 +13,10 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media screen and (min-width: @sm) {
+    padding: var(--gutter);
+  }
 
   @media screen and (min-width: @lg) {
     gap: 5.5rem;
@@ -53,9 +57,10 @@
 .project__details {
   display: grid;
   gap: 0.5rem;
+  text-wrap: pretty;
 
   @media screen and (min-width: @lg) {
-    max-width: 65%;
+    max-width: 60%;
   }
 }
 
