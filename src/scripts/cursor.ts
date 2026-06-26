@@ -2,7 +2,13 @@ export function initCursor() {
   const cursor = document.querySelector(".js-cursor") as HTMLElement;
   if (!cursor) return;
 
+  let hasMovedMouse = false;
+
   document.addEventListener("mousemove", (e) => {
+    if (!hasMovedMouse) {
+      hasMovedMouse = true;
+      cursor.classList.add("is-visible");
+    }
     cursor.style.left = `${e.clientX}px`;
     cursor.style.top = `${e.clientY}px`;
   });

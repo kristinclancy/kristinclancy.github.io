@@ -17,10 +17,6 @@
   align-items: center;
   justify-content: center;
 
-  @media (pointer: fine) {
-    display: flex;
-  }
-
   &__icon {
     opacity: 0;
     width: 50%;
@@ -39,6 +35,12 @@
 
     .cursor__icon {
       opacity: 1;
+    }
+  }
+
+  &.is-visible {
+    @media (pointer: fine) {
+      display: flex;
     }
   }
 }
